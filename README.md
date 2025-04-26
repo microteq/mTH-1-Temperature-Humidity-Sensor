@@ -17,7 +17,7 @@ This device is a USB powered, Tasmota driven temperature / humidity sensor, base
 
 
 ## Assembly
-
+<img src="images/assembly.png" alt="Schematix" style="width: 640px !important;" >
  
 ## Material list
 - 1 x Esp32-C3 Super Mini
