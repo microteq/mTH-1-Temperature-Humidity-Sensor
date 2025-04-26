@@ -4,11 +4,9 @@ This device is a USB powered, Tasmota driven temperature / humidity sensor, base
 ## Schematic
 <img src="images/schematic.png" alt="Schematix" style="width: 640px !important;" >
 <br/>
-<br/>
 
 ## Assembly
 <img src="images/assembly.png" alt="Schematix" style="width: 640px !important;">
-<br/>
 <br/>
 
 ## Material list
@@ -29,7 +27,6 @@ Available on AliExpress.
 -	Select the serial port and click Connect.
 -	Click on Install Tasmota, check the Erase device checkbox, and click Next.
 -	Read the warning, then click Install.
-
 
 This will install Tasmota on your ESP32 module.
 <br/>
@@ -55,7 +52,6 @@ This will install Tasmota on your ESP32 module.
 -	In the text field, enter: Restart 1 and confirm by pressing Enter to restart the sensor. After the restart, the new IP address will be active.
 -	Now you must enter your new fixed IP address into your browser to regain access to the Tasmota menu.
 <br />
-<br />
 
 ## Configure the Sensor
 -	Make sure the sensor is reachable via the entered IP address.
@@ -76,7 +72,6 @@ This allows you to reconnect the sensor to a different network if, for example, 
 
 ### MQTT
 Since the processor is not reachable over the network most of the time, it is recommended to enable MQTT. This allows the sensor to automatically send its data to the MQTT server each time it wakes up.
-
 
 ### Why use power-saving mode even when operating via USB?
 During continuous operation, the temperature sensor heats up slightly and always reports a slightly higher temperature because it also measures its own heat output. This does not happen in power-saving mode.
