@@ -2,7 +2,7 @@
 This device is a USB powered, Tasmota driven temperature / humidity sensor, based on the SHT30 chip. The total cost is about 5$.
 
 ## Schematic
-<img src="images/schematic.png" alt="Schematix" width="320"  style="width: 320px !important;" >
+<img src="images/schematic.png" alt="Schematix" style="width: 640px !important;" >
 
 
 
