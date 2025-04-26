@@ -19,7 +19,7 @@ This device is a USB powered, Tasmota driven temperature / humidity sensor, base
 - 1 x case (see stl files)
 
 Available on AliExpress.
-<img src="images/ESP32-C3 Super Mini.jpg" alt="Esp32-C3" style="width: 400px !important;">
+<img src="images/Esp32-C3 Super Mini.jpg" alt="Esp32-C3" style="width: 300px !important;"><img src="images/SHT30.jpg" alt="SHT30" style="width: 300px !important;">
 <br/>
 <br/>
 
