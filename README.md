@@ -3,8 +3,7 @@ This device is a USB powered, Tasmota driven temperature / humidity sensor, base
 
 ## Schematic
 
-<img href="images/schematic.png"/>
-![Schematic](/assets/images/schematic.png)
+![Schematic](images/schematic.png)
 
 
 
