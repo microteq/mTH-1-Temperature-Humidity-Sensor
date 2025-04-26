@@ -22,10 +22,10 @@ This device is a USB powered, Tasmota driven temperature / humidity sensor, base
 
  
 ## Material list
--1 x Esp32-C3 Super Mini
--1 x SHT30 Temperatuere / humidity sensor module
--4 x Cable ca. 8cm long
--1 x case (see stl files)
+- 1 x Esp32-C3 Super Mini
+- 1 x SHT30 Temperatuere / humidity sensor module
+- 4 x Cable ca. 8cm long
+- 1 x case (see stl files)
 
 
 
