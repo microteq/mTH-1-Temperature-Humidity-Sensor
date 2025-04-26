@@ -43,7 +43,7 @@ This will install Tasmota on your ESP32 module.
 -	Connect to this Wi-Fi network.
 -	Open a browser and go to the URL: http://192.168.4.1
 -	Now you can connect your sensor to your own Wi-Fi network by entering your SSID and Wi-Fi password.
--	Click on Save and wait a moment.
+-	Click on *Save* and wait a moment.
 -	Tasmota will now automatically obtain an IP address from your network.
 -	If you have only one Wi-Fi network and your computer automatically reconnects to it, Tasmota will display the assigned IP address. 
 -	Click on the link, and your browser will automatically open the configuration page of your sensor.
@@ -51,28 +51,28 @@ This will install Tasmota on your ESP32 module.
 
 ### Optional (but recommended)
 -	You can now assign a fixed IP address to your sensor.
--	In the Tasmota menu, select Tools and then Console.
--	In the text field, enter: IPAddress1 <your desired fixed IP address> and confirm by pressing Enter.
--	In the text field, enter: Restart 1 and confirm by pressing Enter to restart the sensor. After the restart, the new IP address will be active.
+-	In the Tasmota menu, select *Tools* and then *Console*.
+-	In the text field, enter: *IPAddress1* <your desired fixed IP address> and confirm by pressing *Enter*.
+-	In the text field, enter: *Restart 1* and confirm by pressing *Enter* to restart the sensor. After the restart, the new IP address will be active.
 -	Now you must enter your new fixed IP address into your browser to regain access to the Tasmota menu.
 <br />
 
 ## Configure the Sensor
 -	Make sure the sensor is reachable via the entered IP address.
 -	Open the file config.html in a browser.
--	Enter your sensor's IP address and click Set configuration.
+-	Enter your sensor's IP address and click *Set configuration*.
 The configuration script assigns a user-friendly name to the device, configures the ESP32 processor's GPIOs for the temperature sensor, and installs a script for power-saving mode.
 <br/>
 
 ## Usage
 ### Power-Saving Mode
 When the mTH-1 starts up, the blue LED will blink for about 10 seconds. During this time, you can press the push button to prevent the processor from entering power-saving mode.
-If the button is not pressed, the processor will enter power-saving mode for two minutes, then wake up, send its data, and return to power-saving mode.
+If the button is not pressed, the processor will enter power-saving mode for **two minutes**, then wake up, send its data, and return to power-saving mode.
 
 In power-saving mode, the processor is not reachable over the network.
 
 ### Force Access Point Mode
-If the processor is not in power-saving mode and the push button is pressed for more than four seconds, the mTH-1 will switch to Access Point mode for three minutes.
+If the processor is not in power-saving mode and the push button is pressed for more than **four seconds**, the mTH-1 will switch to Access Point mode for **three minutes**.
 This allows you to reconnect the sensor to a different network if, for example, it becomes unreachable after moving to a new location.
 
 ### MQTT
