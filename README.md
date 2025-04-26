@@ -74,6 +74,7 @@ This will install Tasmota on your ESP32 module.
 -	Now you must enter your new fixed IP address into your browser to regain access to the Tasmota menu.
 <br />
 <br />
+
 ## Configure the Sensor
 -	Make sure the sensor is reachable via the entered IP address.
 -	Open the file config.html in a browser.
