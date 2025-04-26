@@ -27,10 +27,10 @@ Available on AliExpress.
 
 - Connect your sensor to a computer using a USB cable. 
 -	Open a browser, and go to the page https://tasmota.github.io/install/.
--	Select the Tasmota version you want to install and click the blue Connect button to connect your sensor to the installation app.
--	Select the serial port and click Connect.
--	Click on Install Tasmota, check the Erase device checkbox, and click Next.
--	Read the warning, then click Install.
+-	Select the Tasmota version you want to install and click the blue *Connect* button to connect your sensor to the installation app.
+-	Select the serial port and click *Connect*.
+-	Click on *Install Tasmota*, check the *Erase device* checkbox, and click *Next*.
+-	Read the warning, then click *Install*.
 
 This will install Tasmota on your ESP32 module.
 <br/>
