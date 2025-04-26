@@ -3,22 +3,13 @@ This device is a USB powered, Tasmota driven temperature / humidity sensor, base
 
 ## Schematic
 <img src="images/schematic.png" alt="Schematix" style="width: 640px !important;" >
-
-
-
-
-
-
-
-
-
-
-
-
+<br/>
+<br/>
 
 ## Assembly
 <img src="images/assembly.png" alt="Schematix" style="width: 640px !important;">
-
+<br/>
+<br/>
 
 ## Material list
 - 1 x Esp32-C3 Super Mini
@@ -26,19 +17,9 @@ This device is a USB powered, Tasmota driven temperature / humidity sensor, base
 - 4 x Cable ca. 8cm long
 - 1 x case (see stl files)
 
-
-
-
-
-
-
-
-
-
-
-
 Available on AliExpress.
-
+<br/>
+<br/>
 
 ## Flashing the ESP32 with Tasmota
 
@@ -51,7 +32,8 @@ Available on AliExpress.
 
 
 This will install Tasmota on your ESP32 module.
-
+<br/>
+<br/>
 
 ## Connecting to Tasmota
 
