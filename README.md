@@ -58,6 +58,7 @@ This will install Tasmota on your ESP32 module.
 -	Open the file config.html in a browser.
 -	Enter your sensor's IP address and click Set configuration.
 The configuration script assigns a user-friendly name to the device, configures the ESP32 processor's GPIOs for the temperature sensor, and installs a script for power-saving mode.
+<br/>
 
 ## Usage
 ### Power-Saving Mode
