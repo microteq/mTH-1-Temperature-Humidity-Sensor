@@ -80,3 +80,19 @@ Since the processor is not reachable over the network most of the time, it is re
 
 ### Why use power-saving mode even when operating via USB?
 During continuous operation, the temperature sensor heats up slightly and always reports a slightly higher temperature because it also measures its own heat output. This does not happen in power-saving mode.
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+## About sponsorship
+
+If this device is helpful to you, please consider supporting this project. Sponsorship helps keep the project going, improve features, and fix any issues that arise. Your contribution goes a long way in making the project better for everyone.
+
+
+[![Sponsor me on GitHub](https://img.shields.io/badge/sponsor-me%20on%20GitHub-green)](https://github.com/sponsors/microteq)
+
+<a href="https://www.buymeacoffee.com/microteq" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="140" height="38" style="height: 38px !important;width: 140px !important;" ></a>
+
