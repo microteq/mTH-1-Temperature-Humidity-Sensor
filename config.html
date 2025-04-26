@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tasmota Konfiguration Upload</title>
+        <style>
+            body 
+            { 
+                font-family: Arial, sans-serif; 
+                margin: 40px; 
+                padding: 10px; 
+                background-color: #f0f0f0; 
+            }
+
+            h1 
+            { 
+                text-align: center; 
+            }
+
+            .input-container, .button-container, .progress-container 
+            { 
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 20px 0; 
+            }
+
+            .input-wrapper 
+            {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start; /* Label links */
+                width: 300px; /* gleiche Breite wie das Input-Feld */
+            }
+
+            input[type="text"] 
+            { 
+                width: 100%; 
+                padding: 10px; 
+                font-size: 16px; 
+                margin-top: 5px;
+            }
+
+            button 
+            { 
+                padding: 10px 20px; 
+                font-size: 16px; 
+                cursor: pointer; 
+                background-color: #4CAF50; 
+                color: white; 
+                border: none; 
+                border-radius: 5px; 
+            }
+
+            button:hover 
+            { 
+                background-color: #45a049; 
+            }
+
+            progress 
+            {
+                width: 300px;
+                height: 20px;
+                margin-top: 10px;
+                display: none; /* Initially hidden */
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Tasmota mTH-1 Configuration</h1>
+        <div class="input-container">
+        <div class="input-wrapper">
+            <label for="ipAddress">Ip address of your device</label>
+            <input type="text" id="ipAddress" placeholder="i.e. 192.168.1.50">
+        </div>
+        </div>
+
+        <div class="button-container">
+        <button onclick="sendConfig()">Set configuration</button>
+        </div>
+
+        <div class="progress-container">
+            <progress id="progressBar" value="0" max="100"></progress>
+        </div>
+        <script>
+            async function sendConfig() 
+            {
+                var ip = document.getElementById("ipAddress").value.trim();
+                if (!ip) {
+                    alert("Please enter the ip address of your device.");
+                    return;
+                }
+
+                const progressBar = document.getElementById('progressBar');
+                progressBar.value = 0;
+                progressBar.max = 100;
+                progressBar.style.display = 'block'; // show the bar
+
+                // This is the configuration, line by line
+                const configCommands = [
+                    `Backlog DeviceName mTH-1; FriendlyName1 mTH-1 Temperature / Humidity Sensor`,
+                    `Rule1 ON system#boot DO backlog BlinkCount 20; BlinkTime 5; Power1 3; RuleTimer1 10;  ENDON  ON Switch1#State==2 DO backlog  RuleTimer1 0; Power1 1; DeepSleepTime 0 ENDON  ON Rules#Timer=1 DO backlog DeepSleepTime 120; Power1 0; ENDON`,
+                    `Rule1 1`,
+                    `Rule2 ON Switch1#State=3 DO WifiConfig 2 ENDON`,
+                    `Rule2 1`,
+                    `Backlog Template {"NAME":"mTH-1","GPIO":[0,0,0,0,0,0,0,640,256,160,608,0,0,0,0,0,0,0,0,0,0,0],"FLAG":0,"BASE":1}; Module 0`,
+                ];
+
+                for (let command of configCommands) 
+                {
+                    progressBar.value += (100 / configCommands.length);
+                    let url = "http://" + ip + "/cm?cmnd=" + encodeURIComponent(command);
+                    console.log("Sende: ", command);
+                    try 
+                    {
+                        await fetch(url, { mode: 'no-cors' });
+                    } 
+                    catch (error) 
+                    {
+                        console.error("Error when sending:", error);
+                        alert("Error when sending a command. Cancelled.");
+                        return;
+                    }
+                    await new Promise(resolve => setTimeout(resolve, 200));
+                }
+                progressBar.value = 100;
+                alert("mTH-1 Tasmota device successfully configured.");
+                progressBar.style.display = 'none'; // hide the bar
+            }
+        </script>
+    </body>
+</html>
