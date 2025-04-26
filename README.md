@@ -1,6 +1,7 @@
 # Tasmota Temperature / Humidity Sensor mTH-1
 This device is a USB powered, Tasmota driven temperature / humidity sensor, based on the SHT30 chip. The total cost is about 5$.
-<img src="images/device.png" alt="Device" style="width: 640px !important;" >
+
+<img src="images/device.png" alt="Device" style="width: 580px !important;" >
 </br>
 
 ## Schematic
